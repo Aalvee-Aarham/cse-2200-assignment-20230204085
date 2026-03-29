@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #FAF7F2;
+    font-family: 'DM Sans', sans-serif;
+    color: #2d1f2e;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #FECDD5;
+    color: #BE123C;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F0EBE1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #FDA4AF;
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #F43F5E;
+  }
+}
+
+@layer components {
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border border-rose-100 bg-white/70 backdrop-blur-sm
+    font-body text-[15px] text-plum placeholder-rose-200
+    focus:outline-none focus:ring-2 focus:ring-rose-300 focus:border-rose-300
+    transition-all duration-200 ease-out
+    hover:border-rose-200 hover:bg-white/90;
+  }
+
+  .input-error {
+    @apply border-rose-400 bg-rose-50/50 focus:ring-rose-400;
+  }
+
+  .label-text {
+    @apply block text-xs font-semibold tracking-widest uppercase text-plum/60 mb-1.5;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .font-body {
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .font-mono {
+    font-family: 'DM Mono', monospace;
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #E11D48 0%, #4A1942 60%, #0D9488 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-mesh {
+    background-image:
+      radial-gradient(at 20% 80%, rgba(244, 63, 94, 0.08) 0px, transparent 50%),
+      radial-gradient(at 80% 20%, rgba(74, 25, 66, 0.06) 0px, transparent 50%),
+      radial-gradient(at 50% 50%, rgba(13, 148, 136, 0.04) 0px, transparent 60%);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+  }
+
+  .delay-100 { animation-delay: 0.1s; }
+  .delay-200 { animation-delay: 0.2s; }
+  .delay-300 { animation-delay: 0.3s; }
+  .delay-400 { animation-delay: 0.4s; }
+  .delay-500 { animation-delay: 0.5s; }
+  .delay-600 { animation-delay: 0.6s; }
+  .delay-700 { animation-delay: 0.7s; }
+}
